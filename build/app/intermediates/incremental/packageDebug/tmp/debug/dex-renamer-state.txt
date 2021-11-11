@@ -1,0 +1,4 @@
+#Thu Nov 11 10:16:59 UTC 2021
+base.0=D\:\\tiktok\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

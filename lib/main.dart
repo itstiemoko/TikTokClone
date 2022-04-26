@@ -38,7 +38,6 @@ class TikTokHomePage extends StatefulWidget {
 }
 
 class _TikTokHomePageState extends State<TikTokHomePage> {
-
   ///Init default select page to 0
   int _selectedPageIndex = 0;
 
@@ -52,8 +51,7 @@ class _TikTokHomePageState extends State<TikTokHomePage> {
   ];
 
   ///Update variable "_selectedPageIndex" on bottom navigation item tapped
-  void _onItemTapped(int index)
-  {
+  void _onItemTapped(int index) {
     setState(() {
       _selectedPageIndex = index;
     });
@@ -62,16 +60,20 @@ class _TikTokHomePageState extends State<TikTokHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: _widgetPageOptions.elementAt(_selectedPageIndex)
-      ),
+      body: Center(child: _widgetPageOptions.elementAt(_selectedPageIndex)),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
-          const BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Accueil'),
-          const BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Découvrir'),
-          BottomNavigationBarItem(icon: Image.asset("assets/images/tiktok_add.png", height: 25), label: 'ajouter'),
-          const BottomNavigationBarItem(icon: Icon(Icons.message), label: 'Boîte de réception'),
-          const BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile')
+          const BottomNavigationBarItem(
+              icon: Icon(Icons.home), label: 'Accueil'),
+          const BottomNavigationBarItem(
+              icon: Icon(Icons.search), label: 'Découvrir'),
+          BottomNavigationBarItem(
+              icon: Image.asset("assets/images/tiktok_add.png", height: 25),
+              label: 'ajouter'),
+          const BottomNavigationBarItem(
+              icon: Icon(Icons.message), label: 'Boîte de réception'),
+          const BottomNavigationBarItem(
+              icon: Icon(Icons.person), label: 'Profile')
         ],
         backgroundColor: Colors.black,
         currentIndex: _selectedPageIndex,
@@ -85,4 +87,3 @@ class _TikTokHomePageState extends State<TikTokHomePage> {
     );
   }
 }
-
